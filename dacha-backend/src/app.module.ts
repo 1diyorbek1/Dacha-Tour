@@ -10,12 +10,22 @@ import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'dacha.db',
-      entities: [Dacha, User, Settings, Booking],
-      synchronize: true, // Auto-create database tables
-    }),
+    TypeOrmModule.forRoot(
+      process.env.DATABASE_URL
+        ? {
+            type: 'postgres',
+            url: process.env.DATABASE_URL,
+            entities: [Dacha, User, Settings, Booking],
+            synchronize: true,
+            ssl: { rejectUnauthorized: false },
+          }
+        : {
+            type: 'sqlite',
+            database: 'dacha.db',
+            entities: [Dacha, User, Settings, Booking],
+            synchronize: true,
+          },
+    ),
     TypeOrmModule.forFeature([Dacha, User, Settings, Booking]),
     ScheduleModule.forRoot(),
   ],

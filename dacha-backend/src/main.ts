@@ -12,7 +12,8 @@ async function bootstrap() {
   app.use(bodyParser.json({ limit: '100mb' }));
   app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
 
-  await app.listen(5000);
-  console.log('NestJS Server is running on: http://localhost:5000');
+  const port = process.env.PORT || 5000;
+  await app.listen(port);
+  console.log(`NestJS Server is running on port: ${port}`);
 }
 bootstrap();
