@@ -9,7 +9,6 @@ import Cabinet from './pages/Cabinet';
 import Login from './pages/Login';
 import AdminLogin from './pages/AdminLogin';
 import AdminPanel from './pages/AdminPanel';
-import AdminPanel from './pages/AdminPanel';
 import api from './api';
 import HolidayEffects from './components/HolidayEffects';
 import { LogOut } from 'lucide-react';

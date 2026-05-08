@@ -94,17 +94,40 @@ function Landing({ settings }) {
         </div>
       </section>
 
-      {/* Developer Footer */}
-      <footer style={{
-        textAlign: 'center',
-        padding: '30px 20px',
-        borderTop: '1px solid rgba(0,0,0,0.08)',
-        marginTop: '20px'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '25px' }}>
-          <img src={siteLogo} alt="Logo" style={{ height: '50px', borderRadius: '50%', border: '2px solid #e2e8f0' }} />
-          <span style={{ fontSize: '1.5rem', fontWeight: '900', color: 'var(--primary)', letterSpacing: '1px' }}>{siteName.toUpperCase()}</span>
+      {/* How it works */}
+      <section style={{ padding: '80px 20px', textAlign: 'center', background: 'white' }}>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '50px', fontWeight: '900', color: 'var(--primary)' }}>Qanday ishlaydi?</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="card" style={{ padding: '40px', textAlign: 'center' }}>
+            <div style={{ background: 'rgba(26, 67, 50, 0.1)', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 25px', color: 'var(--primary)', fontSize: '1.5rem', fontWeight: '900' }}>1</div>
+            <h3 style={{ marginBottom: '15px', fontWeight: '800' }}>Ro'yxatdan o'ting</h3>
+            <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>Ismingiz va telefon raqamingizni kiriting. Bizning tizim siz uchun maxsus xona yaratadi.</p>
+          </div>
+          <div className="card" style={{ padding: '40px', textAlign: 'center' }}>
+            <div style={{ background: 'rgba(26, 67, 50, 0.1)', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 25px', color: 'var(--primary)', fontSize: '1.5rem', fontWeight: '900' }}>2</div>
+            <h3 style={{ marginBottom: '15px', fontWeight: '800' }}>Telegram orqali tasdiqlang</h3>
+            <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>Telegram botimizga o'tib, raqamingizni tasdiqlang. Bu xavfsizlik va faqat o'z dachangizni boshqarishingizni ta'minlaydi.</p>
+          </div>
+          <div className="card" style={{ padding: '40px', textAlign: 'center' }}>
+            <div style={{ background: 'rgba(26, 67, 50, 0.1)', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 25px', color: 'var(--primary)', fontSize: '1.5rem', fontWeight: '900' }}>3</div>
+            <h3 style={{ marginBottom: '15px', fontWeight: '800' }}>Dacha qo'shing</h3>
+            <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>O'z dachangiz rasmlari, narxlari va qulayliklarini joylang. Har bir foydalanuvchining o'z shaxsiy kabineti bo'ladi.</p>
+          </div>
         </div>
+      </section>
+
+      <footer style={{ 
+        padding: '60px 20px', 
+        background: '#f8fafc', 
+        textAlign: 'center',
+        borderTop: '1px solid #e2e8f0'
+      }}>
+        <div style={{ marginBottom: '30px' }}>
+          <img src="/logo.jpg" alt="Logo" style={{ height: '60px', borderRadius: '50%', marginBottom: '15px' }} />
+          <h2 style={{ color: 'var(--primary)', fontWeight: '800' }}>Dacha Tour</h2>
+          <p style={{ color: 'var(--text-muted)' }}>O'zbekistondagi eng yaxshi dachalar platformasi</p>
+        </div>
+
         <a 
           href="https://t.me/Martonov_D" 
           target="_blank" 
@@ -112,25 +135,16 @@ function Landing({ settings }) {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '10px',
-            padding: '14px 30px',
-            borderRadius: '50px',
-            background: 'linear-gradient(135deg, #0088cc, #005f99)',
+            gap: '12px',
+            background: 'linear-gradient(135deg, #0088cc 0%, #00a2ed 100%)',
             color: 'white',
             textDecoration: 'none',
+            padding: '12px 25px',
+            borderRadius: '50px',
             fontWeight: '700',
             fontSize: '1rem',
             boxShadow: '0 8px 25px rgba(0, 136, 204, 0.3)',
-            transition: 'all 0.3s ease',
-            letterSpacing: '0.3px'
-          }}
-          onMouseOver={(e) => {
-            e.target.style.transform = 'translateY(-3px)';
-            e.target.style.boxShadow = '0 12px 35px rgba(0, 136, 204, 0.45)';
-          }}
-          onMouseOut={(e) => {
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 8px 25px rgba(0, 136, 204, 0.3)';
+            transition: 'all 0.3s ease'
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
@@ -138,7 +152,7 @@ function Landing({ settings }) {
           </svg>
           Professional Developer — @Martonov_D
         </a>
-        <p style={{ marginTop: '12px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+        <p style={{ marginTop: '25px', fontSize: '0.9rem', color: '#94a3b8' }}>
           © {new Date().getFullYear()} Dacha Tour. Barcha huquqlar himoyalangan.
         </p>
       </footer>

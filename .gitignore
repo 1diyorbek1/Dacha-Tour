@@ -23,12 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Backend specific
-dacha-backend/node_modules
-dacha-backend/dist
-*.sqlite
+# Databases
 *.db
 *.db.bak
+*.sqlite
+dacha.db
 database.sqlite
-dacha-backend/dacha.db
-dacha-backend/dacha.db.bak
